@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bhytlmcyhr7lk"]
+
+[ext_resource type="Texture2D" uid="uid://djjponsttwqfs" path="res://Assets/GemBg.png" id="1_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=724678715]
+
+[node name="GemBg" type="Sprite2D" parent="." unique_id=1267631920]
+position = Vector2(671, 382)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_uwrxv")
