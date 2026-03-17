@@ -1,5 +1,9 @@
 extends Area2D
 
+class_name Dice
+
+signal game_over
+
 const SPEED = 40.0
 const ROTATION_SPEED = 5.0
 var ROTATION_DIRECTION = 1 if randi() % 2 else -1
@@ -19,5 +23,6 @@ func _physics_process(delta: float) -> void:
 	
 func check_game_over() -> void:
 	if get_viewport_rect().end.y < position.y:
+		game_over.emit()
 		queue_free()
 	
