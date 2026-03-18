@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dwfi65sfhbmnm" path="res://Assets/Dice.png" id="1_ce6im"]
 [ext_resource type="Shape2D" uid="uid://86u3efo24jxw" path="res://Resources/DiceCollisionShape.tres" id="2_xcdw2"]
 
-[node name="Dice" type="Area2D" unique_id=196939403]
+[node name="Dice" type="Area2D" unique_id=196939403 groups=["stoppable"]]
 script = ExtResource("1_53oi2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2088975566]
