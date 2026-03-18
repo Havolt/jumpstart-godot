@@ -4,11 +4,15 @@ class_name Dice
 
 signal game_over
 
-const SPEED = 80.0
-const ROTATION_SPEED = 5.0
-var ROTATION_DIRECTION = 1 if randi() % 2 else -1
+const SPEED: float = 80.0
+const ROTATION_SPEED: float = 5.0
+var ROTATION_DIRECTION: int = 1 if randi() % 2 else -1
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("restart"):
+		get_tree().reload_current_scene()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

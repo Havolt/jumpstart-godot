@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://djjponsttwqfs" path="res://Assets/GemBg.png" id="1_2k76m"]
 [ext_resource type="Script" uid="uid://dd37yws3ngm1v" path="res://Scenes/Game/Game.gd" id="1_xbxml"]
+[ext_resource type="PackedScene" uid="uid://bx7c4mo02v7sl" path="res://Scenes/Fox/Fox.tscn" id="3_xbxml"]
 
 [node name="Game" type="Node2D" unique_id=724678715]
 script = ExtResource("1_xbxml")
@@ -14,5 +15,8 @@ texture = ExtResource("1_2k76m")
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1719618241]
 wait_time = 2.0
 autostart = true
+
+[node name="Fox" parent="." unique_id=328934030 instance=ExtResource("3_xbxml")]
+position = Vector2(632, 578)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
