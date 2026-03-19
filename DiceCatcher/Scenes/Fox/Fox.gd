@@ -2,8 +2,11 @@ extends Area2D
 
 class_name Fox
 
+signal point_scored
+
 @export var speed: float = 200.0
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var sounds: AudioStreamPlayer2D = $Sounds
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,3 +27,10 @@ func _physics_process(delta: float) -> void:
 	position.x += move * delta * speed
 		
 	
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area is Dice: 
+		sounds.play()
+		area.queue_free()
+		point_scored.emit()
