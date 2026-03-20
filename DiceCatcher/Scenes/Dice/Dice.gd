@@ -10,10 +10,6 @@ var ROTATION_DIRECTION: int = 1 if randi() % 2 else -1
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("restart"):
-		get_tree().reload_current_scene()
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

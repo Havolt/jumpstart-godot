@@ -15,19 +15,13 @@ shadow_size = 5
 shadow_color = Color(0.11764706, 0.11764706, 0.11764706, 0.8784314)
 
 [node name="Game" type="Node2D" unique_id=724678715]
+process_mode = 3
 script = ExtResource("1_xbxml")
 
 [node name="GemBg" type="Sprite2D" parent="." unique_id=1267631920]
 position = Vector2(671, 382)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_2k76m")
-
-[node name="SpawnTimer" type="Timer" parent="." unique_id=1719618241]
-wait_time = 2.0
-autostart = true
-
-[node name="Fox" parent="." unique_id=328934030 instance=ExtResource("3_xbxml")]
-position = Vector2(632, 578)
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=1736458052]
 offset_left = 51.0
@@ -43,5 +37,15 @@ volume_db = -8.0
 autoplay = true
 parameters/looping = true
 
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
-[connection signal="point_scored" from="Fox" to="." method="_on_fox_point_scored"]
+[node name="Pausable" type="Node" parent="." unique_id=1098108428]
+process_mode = 1
+
+[node name="Fox" parent="Pausable" unique_id=328934030 instance=ExtResource("3_xbxml")]
+position = Vector2(632, 578)
+
+[node name="SpawnTimer" type="Timer" parent="Pausable" unique_id=1719618241]
+wait_time = 2.0
+autostart = true
+
+[connection signal="point_scored" from="Pausable/Fox" to="." method="_on_fox_point_scored"]
+[connection signal="timeout" from="Pausable/SpawnTimer" to="." method="_on_timer_timeout"]
