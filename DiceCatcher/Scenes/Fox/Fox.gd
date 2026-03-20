@@ -4,7 +4,7 @@ class_name Fox
 
 signal point_scored
 
-@export var speed: float = 200.0
+@export var speed: float = 300.0
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var sounds: AudioStreamPlayer2D = $Sounds
 

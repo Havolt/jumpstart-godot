@@ -4,7 +4,7 @@ class_name Dice
 
 signal game_over
 
-const SPEED: float = 80.0
+const SPEED: float = 100.0
 const ROTATION_SPEED: float = 5.0
 var ROTATION_DIRECTION: int = 1 if randi() % 2 else -1
 
