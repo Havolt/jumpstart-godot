@@ -1,7 +1,28 @@
 [gd_scene format=3 uid="uid://b80051ck1e5ik"]
 
+[ext_resource type="Texture2D" uid="uid://dhg5hikctmh0" path="res://Assets/images/backgroundEmpty.png" id="1_h6g34"]
+[ext_resource type="PackedScene" uid="uid://c4fyfnu4l4ki7" path="res://Scenes/Main/Main.tscn" id="2_o4rt4"]
+
 [node name="Master" type="Control" unique_id=727773049 groups=["ImageManager", "SignalHub"]]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0300001
+anchor_bottom = 1.0
+offset_right = -1014.7201
+offset_bottom = -728.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1014357001]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 26.225
+anchor_bottom = 18.999
+offset_bottom = 35.039978
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h6g34")
+expand_mode = 1
+
+[node name="Main" parent="." unique_id=812291826 instance=ExtResource("2_o4rt4")]
+visible = false
+layout_mode = 1
+offset_right = 1009.0
+offset_bottom = 755.0
