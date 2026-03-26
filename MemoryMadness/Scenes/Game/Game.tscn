@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://5rq82ik7i04h"]
 
 [ext_resource type="Script" uid="uid://b6ukuqfnuv275" path="res://Scenes/Game/Game.gd" id="1_3k6gv"]
-[ext_resource type="PackedScene" uid="uid://cql5xay1b52lu" path="res://Scenes/MemoryTile/MemoryTile.tscn" id="1_gwu2e"]
 [ext_resource type="LabelSettings" uid="uid://kg8bj8mibql5" path="res://Resources/LabelWhite24.tres" id="2_gwu2e"]
 [ext_resource type="Texture2D" uid="uid://dk16kfwtqa4yi" path="res://Assets/ui/blue_button00.png" id="3_y3kpf"]
 [ext_resource type="Texture2D" uid="uid://xk4h4k6palx2" path="res://Assets/ui/yellow_button00.png" id="4_3k6gv"]
@@ -32,39 +31,6 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 4
 columns = 4
-
-[node name="MemoryTile" parent="HB/GridContainer" unique_id=2071056930 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile2" parent="HB/GridContainer" unique_id=1998315164 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile3" parent="HB/GridContainer" unique_id=83483434 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile4" parent="HB/GridContainer" unique_id=1505467639 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile5" parent="HB/GridContainer" unique_id=1649780573 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile6" parent="HB/GridContainer" unique_id=1559260135 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile7" parent="HB/GridContainer" unique_id=1903365789 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile8" parent="HB/GridContainer" unique_id=116776620 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile9" parent="HB/GridContainer" unique_id=661575147 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile10" parent="HB/GridContainer" unique_id=1374637301 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
-
-[node name="MemoryTile11" parent="HB/GridContainer" unique_id=64396314 instance=ExtResource("1_gwu2e")]
-layout_mode = 2
 
 [node name="Spacer2" type="Control" parent="HB" unique_id=510188321]
 layout_mode = 2
@@ -138,3 +104,5 @@ label_settings = ExtResource("2_gwu2e")
 [node name="Spacer3" type="Control" parent="HB" unique_id=1277541710]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[connection signal="pressed" from="HB/VB/ExitButton" to="." method="_on_exit_button_pressed"]
